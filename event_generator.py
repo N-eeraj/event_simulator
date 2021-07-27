@@ -1,7 +1,7 @@
 from random import randint, choice
 
 while True:
-    event = int(input("\nMain Menu\n1. Coin Toss\n2. Die Roll\n3. Spin a Bottle\n4. Exit\nSelect event you want to simulate: "))
+    event = int(input("\nMain Menu\n1. Coin Toss\n2. Die Roll\n3. Spin a Bottle\n4. Draw Card\n5. Exit\nSelect event you want to simulate: "))
     if event == 1:
         print("Coin Toss")
         print(choice(["Head", "Tail"]))
@@ -21,6 +21,9 @@ while True:
                 break
         del players
     elif event == 4:
+        print("Draw Card")
+        print(choice(["Hearts", "Clubs", "Diamonds", "Spades"]), choice((list(range(1, 11)) + ["J, Q, K"])))
+    elif event == 5:
         print("Exiting...")
         break
     else:
